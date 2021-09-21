@@ -12,7 +12,7 @@ app.set("view engine", "handlebars");
 
 //home page
 app.get("/", function (req, res) {
-  res.send("hello from backend to frontend!");
+  res.send("<h1>hello from backend to frontend!</h1>");
 });
 
 // create application/x-www-form-urlencoded parser
