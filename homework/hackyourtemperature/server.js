@@ -27,10 +27,11 @@ app.get("/weather", (req, res) => {
 });
 //handle post request from the client
 app.post("/weather", urlencodedParser, (req, res) => {
-  if (!req.body.cityName || typeof "number") {
+  if (!req.body.cityName) {
     res.render("weather", { cityName: "City not found!" });
+  } else {
+    res.render("weather", { cityName: req.body.cityName });
   }
-  res.render("weather", { cityName: req.body.cityName });
 });
 
 const port = process.env.PORT || 5000;
