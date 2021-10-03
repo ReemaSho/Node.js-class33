@@ -1,6 +1,6 @@
 import { expect } from "@jest/globals";
 import supertest from "supertest";
-import app from "../app.js";
+import app from "../fetchData.js";
 
 const request = supertest(app);
 //happy path
